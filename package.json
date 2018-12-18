@@ -1,0 +1,24 @@
+{
+  "name": "fengjs",
+  "version": "1.0.0",
+  "description": "babel ES6转码，及压缩生成min包",
+  "main": "feng.js",
+  "scripts": {
+    "build": "babel js\\myjs -o js\\feng.js",
+    "minjs": "gulp minifyjs"
+  },
+  "author": "haifengWei",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "gulp": "^4.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.1"
+  }
+}

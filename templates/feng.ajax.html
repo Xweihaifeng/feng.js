@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>封装ajax</title>
+    </head>
+    <body>
+        <script>
+            window.onload = function () {
+                Ajax.get({
+                    url: 'http://dev.wezchina.com/api/cms/cate_tree_by_channel',
+                    data: {'channel': '702cfc30-7d7f-11e7-b9f7-e1b5a9d40f8d'},
+                    success: function(data) {
+                        console.log('get请求：', data);
+                    },
+                    error: function(data) {
+                        console.log(data);
+                    },
+                    async: true
+                })
+                Ajax.post({
+                    url: 'http://dev.wezchina.com/api/activity/enroll/list_views',
+                    data: {
+                        'page': 1,
+                        'limit': 11,
+                        'activity_id': '5d0baa60-4dac-11e8-a835-c7c638ee0957'
+                    },
+                    success: function(data) {
+                        console.log('post请求：', data);
+                    },
+                    error: function(data) {
+                        console.log(data);
+                    },
+                    async: true
+                })
+            }
+        </script>
+    </body>
+</html>
